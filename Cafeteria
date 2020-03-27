@@ -1,0 +1,100 @@
+#include <iostream>
+using namespace std;
+class cafe
+{
+public:
+void menu();
+int a,b,bill=0,bill1;
+char c;
+};
+void cafe::menu()
+{
+	cout<<"MENU"<<"\t\t\t\t\t\t"<<"RATE"<<endl<<endl;
+	cout<<"Eye-opener Espresso------------------------------87"<<"\t\t"<<"Option-1"<<endl<<endl;
+	cout<<"Classic Cappuccino------------------------------100"<<"\t\t"<<"Option-2"<<endl<<endl;
+	cout<<"Filter Coffee-----------------------------------100"<<"\t\t"<<"Option-3"<<endl<<endl;
+	cout<<"Cafe Latte--------------------------------------106"<<"\t\t"<<"Option-4"<<endl<<endl;
+	cout<<"Inverted Cappuccino-----------------------------127"<<"\t\t"<<"Option-5"<<endl<<endl;
+	cout<<"Toffee Cappuccino-------------------------------127"<<"\t\t"<<"Option-6"<<endl<<endl;
+	cout<<"Vanilla Cappuccino------------------------------127"<<"\t\t"<<"Option-7"<<endl<<endl;
+	cout<<"Toffee Latte------------------------------------133"<<"\t\t"<<"Option-8"<<endl<<endl;
+	cout<<"Vanilla Latte-----------------------------------133"<<"\t\t"<<"Option-9"<<endl<<endl;
+	cout<<"Macchiato---------------------------------------104"<<"\t\t"<<"Option-10"<<endl<<endl;
+	cout<<"Cafe Americano----------------------------------100"<<"\t\t"<<"Option-11"<<endl<<endl;
+	cout<<"Cafe Mocha--------------------------------------118"<<"\t\t"<<"Option-12"<<endl<<endl;
+	cout<<"Aztec Coffee------------------------------------154"<<"\t\t"<<"Option-13"<<endl<<endl;
+	cout<<"Ehiopian Coffee---------------------------------154"<<"\t\t"<<"Option-14"<<endl<<endl;
+
+	cout<<"Enter the option"<<endl;
+	cin>>a;
+
+	cout<<endl<<"Enter the quantity"<<endl;
+	cin>>b;
+
+	if(a==1)
+	{
+ 		bill=87*b+bill;
+	}
+ 	
+	else if(a==2 || a==3 || a==11)
+	{
+		bill=100*b+bill;
+	}
+
+	else if(a=4)
+	{
+		bill=106*b+bill;
+	}
+	else if(a==7 || a==5 || a==6)
+	{
+		bill=127*b+bill;
+	}
+
+
+	else if(a==9 || a==8)
+	{
+		bill=133*b+bill;
+	}
+
+
+	else if(a==10)
+	{
+		bill=104*b+bill;
+	}
+
+	else if(a==12)
+	{
+		bill=118*b+bill;
+	}
+
+
+	else if(a==14 || a==13)
+	{
+		bill=154*b+bill;
+	}
+
+	cout<<"Enter Y to order more and N for contiue"<<endl;
+	cin>>c;
+
+	if(c=='Y')
+	{
+	  menu();
+	}
+
+	else if(c=='N')
+	{
+	  	bill1=(bill*18)/100;
+		bill=bill1+bill;
+		cout<<endl<<" Your Total bill including gst is = "<< bill<<endl<<endl;
+	}
+		
+
+		cout<<"*****************    THANKS FOR ODERING    **********************"<<endl<<endl;
+		cout<<"*****************    PLEASE VISIT AGAIN    **********************"; 				
+	}
+
+	int main()
+	{
+		cafe c;
+		c.menu();
+	}
